@@ -37,7 +37,11 @@ class NextcloudTheme : public Theme
 
 public:
     NextcloudTheme() {};
-
+    
+    QString overrideServerUrl() const  {
+        return QLatin1String("https://31.13.217.28");
+    }
+    
     QString configFileName() const  {
         return QLatin1String("nextcloud.cfg");
     }
@@ -77,11 +81,9 @@ public:
                 .arg(MIRALL_VERSION_STRING).arg("http://" MIRALL_STRINGIFY(APPLICATION_DOMAIN))
                 .arg(MIRALL_STRINGIFY(APPLICATION_DOMAIN));
 
-        re += trUtf8("<p><small>By Klaas Freitag, Daniel Molkentin, Jan-Christoph Borchardt, "
-                     "Olivier Goffart, Markus Götz and others.</small></p>");
+        re += trUtf8("<p><small>By Bulmag AD.</small></p>");
 
-        re += tr("<p>Distributed by %1 and licensed under the GNU General Public License (GPL) Version 2.0.<br/>"
-             "%2 and the %2 Logo are registered trademarks of %1 in the "
+        re += tr("%2 and the %2 Logo are registered trademarks of %1 in the "
              "European Union, other countries, or both.</p>")
             .arg(APPLICATION_VENDOR).arg(APPLICATION_NAME);
 
