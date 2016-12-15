@@ -50,11 +50,11 @@ public:
     }
 
     QString updateCheckUrl() const {
-        return QLatin1String("https://updates.nextcloud.org/client/");
+        return QLatin1String("https://www.stowpal.com/client/");
     }
 
     QString helpUrl() const {
-        return QString::fromLatin1("https://docs.nextcloud.com/desktop/2.2/").arg(MIRALL_VERSION_MAJOR).arg(MIRALL_VERSION_MINOR);
+        return QString::fromLatin1("https://www.stowpal.com/desktop/2.2/").arg(MIRALL_VERSION_MAJOR).arg(MIRALL_VERSION_MINOR);
     }
 
 #ifndef TOKEN_AUTH_ONLY
