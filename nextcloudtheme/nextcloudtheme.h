@@ -46,6 +46,10 @@ public:
         return QLatin1String("/stowpal");
     }
     
+    bool multiAccount() const  {
+        return false;
+    }
+    
     QString configFileName() const  {
         return QLatin1String("nextcloud.cfg");
     }
@@ -85,7 +89,7 @@ public:
                 .arg(MIRALL_VERSION_STRING).arg("http://" MIRALL_STRINGIFY(APPLICATION_DOMAIN))
                 .arg(MIRALL_STRINGIFY(APPLICATION_DOMAIN));
 
-        re += trUtf8("<p><small>By Bulmag AD.</small></p>");
+        re += trUtf8("<p>By Bulmag AD</p>");
 
         re += tr("%2 and the %2 Logo are registered trademarks of %1 in the "
              "European Union, other countries, or both.</p>")
