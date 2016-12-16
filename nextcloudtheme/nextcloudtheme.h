@@ -42,6 +42,10 @@ public:
         return QLatin1String("https://31.13.217.28");
     }
     
+    QString defaultServerFolder() const  {
+        return QLatin1String("/stowpal");
+    }
+    
     QString configFileName() const  {
         return QLatin1String("nextcloud.cfg");
     }
